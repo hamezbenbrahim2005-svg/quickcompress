@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Compress JPG, PNG and WebP images directly in your browser for free. No upload required.">
+    <meta name="keywords" content="image compressor, compress image, JPG compressor, PNG compressor, WebP compressor">
+
+    <title>Free Image Compressor - Compress JPG, PNG & WebP</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">QuickCompress</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <h1>Free Image Compressor</h1>
+
+            <p>
+                Compress JPG, PNG and WebP images directly in your browser.
+                Your images never leave your device.
+            </p>
+        </section>
+
+        <section class="compressor">
+
+            <div id="dropZone" class="drop-zone">
+
+                <div class="upload-icon">↑</div>
+
+                <h2>Drop an image here</h2>
+
+                <p>or</p>
+
+                <label for="fileInput" class="upload-button">
+                    Choose Image
+                </label>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept="image/jpeg,image/png,image/webp"
+                    hidden
+                >
+
+                <small>JPG, PNG or WebP • Max 20 MB</small>
+
+            </div>
+
+            <div id="settings" class="settings hidden">
+
+                <div class="file-info">
+
+                    <div>
+                        <span>File</span>
+                        <strong id="fileName">-</strong>
+                    </div>
+
+                    <div>
+                        <span>Original size</span>
+                        <strong id="originalSize">-</strong>
+                    </div>
+
+                </div>
+
+                <label for="quality">
+                    Compression quality:
+                    <strong id="qualityValue">75%</strong>
+                </label>
+
+                <input
+                    type="range"
+                    id="quality"
+                    min="10"
+                    max="100"
+                    value="75"
+                >
+
+                <div class="quality-labels">
+                    <span>Smaller file</span>
+                    <span>Better quality</span>
+                </div>
+
+                <button id="compressButton" class="compress-button">
+                    Compress Image
+                </button>
+
+            </div>
+
+            <div id="result" class="result hidden">
+
+                <h2>Compression complete</h2>
+
+                <div class="result-grid">
+
+                    <div>
+                        <span>Original</span>
+                        <strong id="resultOriginal">-</strong>
+                    </div>
+
+                    <div>
+                        <span>Compressed</span>
+                        <strong id="resultCompressed">-</strong>
+                    </div>
+
+                    <div>
+                        <span>Reduced by</span>
+                        <strong id="reduction">-</strong>
+                    </div>
+
+                </div>
+
+                <a
+                    id="downloadButton"
+                    class="download-button"
+                    download="compressed-image.jpg"
+                >
+                    Download Compressed Image
+                </a>
+
+                <button id="resetButton" class="reset-button">
+                    Compress Another Image
+                </button>
+
+            </div>
+
+            <div id="error" class="error hidden"></div>
+
+        </section>
+
+        <section class="info">
+
+            <h2>How does image compression work?</h2>
+
+            <p>
+                Image compression reduces the file size of an image while
+                attempting to preserve as much visual quality as possible.
+            </p>
+
+            <p>
+                This tool processes your image directly in your browser.
+                Your image is not uploaded to a server.
+            </p>
+
+            <h2>Why compress images?</h2>
+
+            <ul>
+                <li>Reduce website loading times</li>
+                <li>Save storage space</li>
+                <li>Make images easier to send</li>
+                <li>Reduce email attachment sizes</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 QuickCompress</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

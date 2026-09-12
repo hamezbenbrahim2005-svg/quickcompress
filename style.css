@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: auto;
+}
+
+.header {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 18px 0;
+}
+
+.logo {
+    color: #111827;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 0 35px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: auto;
+    color: #6b7280;
+    font-size: 17px;
+}
+
+.compressor {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.drop-zone {
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    text-align: center;
+    padding: 55px 20px;
+    transition: 0.2s;
+}
+
+.drop-zone.dragover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.upload-icon {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.drop-zone h2 {
+    margin-bottom: 5px;
+}
+
+.drop-zone p {
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+.upload-button {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.upload-button:hover {
+    background: #1d4ed8;
+}
+
+.drop-zone small {
+    display: block;
+    color: #9ca3af;
+}
+
+.settings {
+    margin-top: 25px;
+}
+
+.file-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.file-info div,
+.result-grid div {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.file-info span,
+.result-grid span {
+    display: block;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.file-info strong,
+.result-grid strong {
+    display: block;
+    margin-top: 3px;
+    overflow-wrap: anywhere;
+}
+
+.settings label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.quality-labels {
+    display: flex;
+    justify-content: space-between;
+    color: #9ca3af;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.compress-button,
+.download-button {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+
+.compress-button {
+    background: #111827;
+    color: white;
+}
+
+.compress-button:hover {
+    background: #000000;
+}
+
+.result {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.result h2 {
+    margin-bottom: 20px;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.download-button {
+    background: #16a34a;
+    color: white;
+    text-decoration: none;
+}
+
+.download-button:hover {
+    background: #15803d;
+}
+
+.reset-button {
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: transparent;
+    border: none;
+    color: #2563eb;
+    cursor: pointer;
+}
+
+.error {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fee2e2;
+    color: #991b1b;
+    text-align: center;
+}
+
+.info {
+    background: white;
+    margin: 35px 0;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.info h2 {
+    margin-bottom: 10px;
+}
+
+.info h2:not(:first-child) {
+    margin-top: 25px;
+}
+
+.info p {
+    color: #4b5563;
+    margin-bottom: 12px;
+}
+
+.info ul {
+    padding-left: 20px;
+    color: #4b5563;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .compressor {
+        padding: 20px;
+    }
+
+    .file-info,
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .drop-zone {
+        padding: 40px 15px;
+    }
+}
